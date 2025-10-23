@@ -1,5 +1,5 @@
-import React from 'react';
-import { useApp } from '../context/AppContext';
+import React from "react";
+import { useApp } from "../context/AppContext";
 
 const ProfileSection = () => {
   const { currentData } = useApp();
@@ -11,7 +11,7 @@ const ProfileSection = () => {
         <h2 className="text-5xl md:text-6xl font-bold mb-16 text-gray-900 dark:text-white">
           {profileSection.title}
         </h2>
-        
+
         <div className="grid md:grid-cols-2 gap-12">
           {/* Sol Taraf - Basic Information */}
           <div>
@@ -20,7 +20,10 @@ const ProfileSection = () => {
             </h3>
             <div className="space-y-4">
               {profileSection.basicInfo.items.map((item, index) => (
-                <div key={index} className="flex justify-between py-3 border-b border-gray-200 dark:border-gray-700">
+                <div
+                  key={index}
+                  className="flex justify-between py-3 border-b border-gray-200 dark:border-gray-700"
+                >
                   <span className="font-semibold text-gray-900 dark:text-white">
                     {item.label}
                   </span>
@@ -39,7 +42,10 @@ const ProfileSection = () => {
             </h3>
             <div className="space-y-4">
               {profileSection.aboutMe.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+                <p
+                  key={index}
+                  className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg"
+                >
                   {paragraph}
                 </p>
               ))}

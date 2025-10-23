@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Axios instance oluştur
 const api = axios.create({
-  baseURL: 'https://reqres.in/api',
+  baseURL: 'https://jsonplaceholder.typicode.com',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -36,7 +36,7 @@ api.interceptors.response.use(
 // POST isteği fonksiyonu
 export const sendPortfolioData = async (data) => {
   try {
-    const response = await api.post('/workintech', data);
+    const response = await api.post('/posts', data);
     return { success: true, data: response.data };
   } catch (error) {
     console.error('API Error:', error);

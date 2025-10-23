@@ -1,13 +1,13 @@
-import React from 'react';
-import { AppProvider } from './context/AppContext';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import SkillsSection from './components/SkillsSection';
-import ProfileSection from './components/ProfileSection';
-import ProjectsSection from './components/ProjectsSection';
-import Footer from './components/Footer';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React from "react";
+import { AppProvider } from "./context/AppContext";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import SkillsSection from "./components/SkillsSection";
+import ProfileSection from "./components/ProfileSection";
+import ProjectsSection from "./components/ProjectsSection";
+import Footer from "./components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
           <ProjectsSection />
           <Footer />
         </main>
-        
+
         <ToastContainer
-          position="top-left"
+          position="bottom-left"
           autoClose={1500}
           hideProgressBar={false}
           newestOnTop={false}

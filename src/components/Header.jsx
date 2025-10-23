@@ -1,13 +1,15 @@
-import React from 'react';
-import { useApp } from '../context/AppContext';
+import React from "react";
+import { useApp } from "../context/AppContext";
 
 const Header = () => {
-  const { darkMode, toggleDarkMode, currentLanguage, toggleLanguage } = useApp();
+  const { darkMode, toggleDarkMode, currentLanguage, toggleLanguage, currentData } =
+    useApp();
+  const { header } = currentData;
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -18,29 +20,31 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
-              <span className="text-purple-600 dark:text-purple-300 text-xl font-bold">A</span>
+              <span className="text-purple-600 dark:text-purple-300 text-xl font-bold">
+                A
+              </span>
             </div>
           </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button
-              onClick={() => scrollToSection('skills')}
+              onClick={() => scrollToSection("skills")}
               className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium"
             >
-              Skills
+              {header.skillsButton}
             </button>
             <button
-              onClick={() => scrollToSection('projects')}
+              onClick={() => scrollToSection("projects")}
               className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium"
             >
-              Projects
+              {header.projectsButton}
             </button>
             <button
-              onClick={() => scrollToSection('footer')}
+              onClick={() => scrollToSection("footer")}
               className="px-4 py-2 border-2 border-purple-600 text-purple-600 dark:border-purple-400 dark:text-purple-400 rounded-lg hover:bg-purple-600 hover:text-white dark:hover:bg-purple-400 dark:hover:text-gray-900 transition-all font-medium"
             >
-              Hire me
+              {header.hireMeButton}
             </button>
           </nav>
 
@@ -56,7 +60,7 @@ const Header = () => {
               />
               <div className="w-14 h-7 bg-gray-300 peer-focus:outline-none rounded-full peer dark:bg-purple-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all"></div>
               <span className="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
-                {darkMode ? 'DARK MODE' : 'LIGHT MODE'}
+                {darkMode ? header.darkModeText : header.lightModeText}
               </span>
             </label>
 
@@ -67,10 +71,15 @@ const Header = () => {
               onClick={toggleLanguage}
               className="text-sm font-medium text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
             >
-              <span className="text-gray-600 dark:text-gray-400">
-                {currentLanguage === 'tr' ? 'TÜRKÇE' : 'ENGLISH'}
+              <span
+                className={`${
+                  currentLanguage === "tr"
+                    ? "text-blue-600 dark:text-blue-400"
+                    : "text-red-600 dark:text-red-400"
+                }`}
+              >
+                {currentLanguage === "tr" ? header.turkishText : header.englishText}
               </span>
-              <span className="ml-1">'YE GEÇ</span>
             </button>
           </div>
         </div>
