@@ -22,7 +22,6 @@ function App() {
           <Footer />
         </main>
         
-        {/* Toast Container - Bildirimler için */}
         <ToastContainer
           position="top-left"
           autoClose={1500}

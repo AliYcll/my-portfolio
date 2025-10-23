@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { sendPortfolioData } from '../services/api';
-import { toast } from 'react-toastify';
 
 const Footer = () => {
-  const { currentData, currentLanguage } = useApp();
-  const { footer } = currentData;
+  const { currentLanguage } = useApp();
   const [dataSent, setDataSent] = useState(false);
 
   useEffect(() => {
@@ -15,46 +13,46 @@ const Footer = () => {
           name: 'Portfolio Visit',
           timestamp: new Date().toISOString(),
           language: currentLanguage,
-          userAgent: navigator.userAgent,
         });
 
         if (result.success) {
           console.log('API Response:', result.data);
-          toast.success('Veri başarıyla gönderildi! 🚀');
           setDataSent(true);
-        } else {
-          console.error('API Error:', result.error);
-          toast.error('Veri gönderilemedi! ❌');
         }
       }
     };
 
-    // Component mount olduğunda veri gönder
     sendData();
   }, [currentLanguage, dataSent]);
 
   return (
-    <footer className="py-16 md:py-20 bg-white dark:bg-gray-900 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+    <footer id="footer" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-6 lg:px-20 max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-900 dark:text-white">
-          {footer.heading}
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-white">
+          Let's work together on
+          <br />
+          your next product.
         </h2>
-        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-4 md:gap-8 text-pink-500 font-semibold">
-          {Object.entries(footer.links).map(([key, link]) => (
-            <a
-              key={key}
-              href={link.url}
-              target={key !== 'email' && key !== 'blog' ? '_blank' : undefined}
-              rel={key !== 'email' && key !== 'blog' ? 'noopener noreferrer' : undefined}
-              className="hover:underline hover:text-pink-600 transition-colors text-base md:text-lg"
-            >
-              {link.label}
-            </a>
-          ))}
+        
+        <div className="flex justify-center mb-12">
+          <a
+            href="mailto:almilasucode@gmail.com"
+            className="text-purple-600 dark:text-purple-400 text-xl font-medium hover:underline flex items-center gap-2"
+          >
+            👉 almilasucode@gmail.com
+          </a>
         </div>
-        <div className="mt-8 md:mt-12 text-center text-xs md:text-sm text-gray-600 dark:text-gray-400">
-          <p>© 2024 Portfolio. All rights reserved.</p>
-          <p className="mt-2">Made with ❤️ using React & Tailwind CSS</p>
+
+        <div className="flex justify-center items-center gap-8 text-purple-600 dark:text-purple-400">
+          <a href="#" className="hover:text-purple-700 dark:hover:text-purple-300 font-medium">
+            Personal Blog
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-700 dark:hover:text-purple-300 font-medium">
+            Github
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-700 dark:hover:text-purple-300 font-medium">
+            Linkedin
+          </a>
         </div>
       </div>
     </footer>

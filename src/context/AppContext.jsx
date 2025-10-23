@@ -3,16 +3,12 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 import { data } from '../data/data';
 import { toast } from 'react-toastify';
 
-// Context oluştur
 const AppContext = createContext();
 
-// Provider component
 export const AppProvider = ({ children }) => {
-  // localStorage ile state yönetimi
   const [darkMode, setDarkMode] = useLocalStorage('darkMode', false);
   const [currentLanguage, setCurrentLanguage] = useLocalStorage('language', 'tr');
 
-  // Dark mode class toggle
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
@@ -21,7 +17,6 @@ export const AppProvider = ({ children }) => {
     }
   }, [darkMode]);
 
-  // Dark mode toggle fonksiyonu
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     toast.success(
@@ -29,7 +24,6 @@ export const AppProvider = ({ children }) => {
     );
   };
 
-  // Dil değiştirme fonksiyonu
   const toggleLanguage = () => {
     const newLang = currentLanguage === 'tr' ? 'en' : 'tr';
     setCurrentLanguage(newLang);
@@ -38,10 +32,8 @@ export const AppProvider = ({ children }) => {
     );
   };
 
-  // Mevcut dildeki veriyi al
   const currentData = data[currentLanguage];
 
-  // Context value
   const value = {
     darkMode,
     toggleDarkMode,
@@ -53,7 +45,6 @@ export const AppProvider = ({ children }) => {
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
-// Custom hook - Context'i kullanmak için
 export const useApp = () => {
   const context = useContext(AppContext);
   if (!context) {
