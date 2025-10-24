@@ -74,7 +74,7 @@ export const data = {
       },
     },
     projectsSection: {
-      title: "Deneyim", 
+      title: "Projeler", 
       githubLinkText: "GitHub",
       viewSiteLinkText: "Live Demo",
       projects: [
