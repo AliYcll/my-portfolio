@@ -27,8 +27,7 @@ export const data = {
       hireMeButton: "Beni İşe Al",
       darkModeText: "KARANLIK MOD",
       lightModeText: "AYDINLIK MOD",
-      turkishText: "TÜRKÇE",
-      englishText: "ENGLISH",
+      turkishText: "SWITCH TO ENGLISH",
     },
     skillsSection: {
       title: "Yetenekler",
@@ -155,8 +154,7 @@ export const data = {
       hireMeButton: "Hire me",
       darkModeText: "DARK MODE",
       lightModeText: "LIGHT MODE",
-      turkishText: "TÜRKÇE",
-      englishText: "ENGLISH",
+      englishText: "TÜRKÇE'YE GEÇ",
     },
     skillsSection: {
       title: "Skills",

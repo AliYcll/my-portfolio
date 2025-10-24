@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useEffect } from "react";
+import React, { createContext, useEffect } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { data } from "../data/data";
 import { toast } from "react-toastify";
 
-const AppContext = createContext();
+export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useLocalStorage("darkMode", false);
@@ -46,12 +46,4 @@ export const AppProvider = ({ children }) => {
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
-};
-
-export const useApp = () => {
-  const context = useContext(AppContext);
-  if (!context) {
-    throw new Error("useApp must be used within AppProvider");
-  }
-  return context;
 };
