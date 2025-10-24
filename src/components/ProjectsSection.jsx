@@ -1,134 +1,34 @@
 import React from "react";
 import { useApp } from "../hooks/useApp";
-import Section from "./common/Section";
-import SectionTitle from "./common/SectionTitle";
-import Card from "./common/Card";
 
 const ProjectsSection = () => {
   const { currentData } = useApp();
   const { projectsSection } = currentData;
 
-  // 3 proje göster
-  const projects = [
-    {
-      id: 1,
-      title: "Workintech",
-      description:
-        "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
-      tags: ["react", "redux", "axios"],
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600",
-      links: {
-        github: "https://github.com/AliYcll",
-        live: "https://example.com",
-      },
-    },
-    {
-      id: 2,
-      title: "Random Jokes",
-      description:
-        "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler.",
-      tags: ["react", "redux", "vercel"],
-      image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600",
-      links: {
-        github: "https://github.com/AliYcll",
-        live: "https://example.com",
-      },
-    },
-    {
-      id: 3,
-      title: "Journey",
-      description:
-        "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package.",
-      tags: ["react", "redux", "axios"],
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600",
-      links: {
-        github: "https://github.com/AliYcll",
-        live: "https://example.com",
-      },
-    },
-  ];
-
   return (
-    <Section
-      id="projects"
-      className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300"
-    >
-      <SectionTitle>{projectsSection.title}</SectionTitle>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <Card key={project.id}>
-            {/* Proje Görseli */}
-            <div className="h-64 overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-
-            {/* Proje Detayları */}
-            <div className="p-6 space-y-4">
-              <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-                {project.title}
-              </h3>
-
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                {project.description}
-              </p>
-
-              {/* Teknoloji Etiketleri */}
-              <div className="flex flex-wrap gap-2 py-2">
-                {project.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded-full text-xs font-medium"
-                  >
-                    {tag}
-                  </span>
+    <section id="projects" className="w-full py-20 transition-colors duration-300">
+      <div className="max-w-[1440px] mx-auto px-8 md:px-16">
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">{projectsSection.title}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {projectsSection.projects.map((project, index) => (
+            <div key={index} className="p-4 rounded-lg border border-transparent hover:border-[#3730A3]/30 hover:shadow-md transition-all duration-300">
+              <img alt={project.title} className="w-full h-48 object-cover rounded-t-lg mb-4" src={project.image} />
+              <h3 className="text-xl font-semibold text-[#3730A3] dark:text-white mb-3">{project.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-5">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.tags.map((tag, tagIndex) => (
+                  <span key={tagIndex} className="text-[#3730A3] text-xs font-medium border border-[#3730A3]/40 px-2.5 py-0.5 rounded-sm">{tag}</span>
                 ))}
               </div>
-
-              {/* Linkler */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
-                <a
-                  href={project.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-600 dark:text-purple-400 font-semibold hover:underline text-sm"
-                >
-                  {projectsSection.githubLinkText}
-                </a>
-                <a
-                  href={project.links.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-600 dark:text-purple-400 font-semibold hover:underline text-sm flex items-center gap-1"
-                >
-                  {projectsSection.viewSiteLinkText}
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
+              <div className="flex justify-between items-center text-sm font-medium">
+                <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="text-[#3730A3] hover:underline">GitHub</a>
+                <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="text-[#3730A3] hover:underline">Live Demo</a>
               </div>
             </div>
-          </Card>
-        ))}
+          ))}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 };
 

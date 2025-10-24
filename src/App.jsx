@@ -12,16 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <AppProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-        <Header />
-        <main>
-          <HeroSection />
-          <SkillsSection />
-          <ProfileSection />
-          <ProjectsSection />
-          <Footer />
-        </main>
-
+      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
         <ToastContainer
           position="bottom-left"
           autoClose={1500}
@@ -34,6 +25,14 @@ function App() {
           pauseOnHover
           theme="colored"
         />
+        <Header />
+        <HeroSection />
+        <SkillsSection />
+        <div className="max-w-[1440px] mx-auto border-t border-gray-200 dark:border-gray-700 "></div>
+        <ProfileSection />
+        <div className="max-w-[1440px] mx-auto border-t border-gray-200 dark:border-gray-700"></div>
+        <ProjectsSection />
+        <Footer />
       </div>
     </AppProvider>
   );

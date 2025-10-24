@@ -1,37 +1,24 @@
 import React from "react";
 import { useApp } from "../hooks/useApp";
-import Section from "./common/Section";
-import SectionTitle from "./common/SectionTitle";
-import Card from "./common/Card";
 
 const SkillsSection = () => {
   const { currentData } = useApp();
   const { skillsSection } = currentData;
 
-  // Sadece ilk 3 skill'i göster
-  const topSkills = skillsSection.skills.slice(0, 3);
-
   return (
-    <Section id="skills" className="bg-white dark:bg-gray-800 transition-colors duration-300">
-      <SectionTitle>{skillsSection.title}</SectionTitle>
-
-      <div className="grid md:grid-cols-3 gap-8">
-        {topSkills.map((skill, index) => (
-          <Card key={index} className="group">
-            <div className="p-8">
-              <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">
-                {skill.name === "JAVASCRIPT" && skillsSection.jsName}
-                {skill.name === "REACT" && skillsSection.reactName}
-                {skill.name === "REDUX" && skillsSection.nodeName}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                {skillsSection.skillDescription}
-              </p>
+    <section id="skills" className="w-full py-20 transition-colors duration-300">
+      <div className="max-w-[1440px] mx-auto px-8 md:px-16">
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">{skillsSection.title}</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillsSection.skills.map((skill, index) => (
+            <div key={index} className="p-2 rounded-md transition-all duration-300 hover:bg-gray-50 hover:dark:bg-gray-800">
+              <h3 className="text-lg font-semibold text-[#3730A3] mb-1">{skill.name}</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{skill.description}</p>
             </div>
-          </Card>
-        ))}
+          ))}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 };
 

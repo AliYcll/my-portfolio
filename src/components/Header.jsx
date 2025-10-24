@@ -1,91 +1,43 @@
 import React from "react";
 import { useApp } from "../hooks/useApp";
-import Button from "./common/Button";
 
 const Header = () => {
-  const { darkMode, toggleDarkMode, currentLanguage, toggleLanguage, currentData } =
+  const { darkMode, toggleDarkMode, currentLanguage, toggleLanguage, currentData, scrollToSection } =
     useApp();
   const { header } = currentData;
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-      <div className="container mx-auto px-4 md:px-6 lg:px-20 max-w-7xl">
-        {/* Theme & Language Toggle - Top Right */}
-        <div className="flex items-center justify-end py-2">
-          <div className="flex items-center gap-3">
-            {/* Dark Mode Toggle */}
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                checked={darkMode}
-                onChange={toggleDarkMode}
-                className="sr-only peer"
-              />
-              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-purple-600"></div>
-              <span className="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
-                {darkMode ? header.darkModeText : header.lightModeText}
-              </span>
-            </label>
-
-            <span className="text-gray-400">|</span>
-
-            {/* Language Toggle */}
-            <button
-              onClick={toggleLanguage}
-              className="text-sm font-medium text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
-            >
-              <span
-                className={
-                  currentLanguage === "tr"
-                    ? "text-red-600 dark:text-red-400"
-                    : "text-blue-600 dark:text-blue-400"
-                }
-              >
-                {currentLanguage === "tr" ? header.turkishText : header.englishText}
-              </span>
-            </button>
-          </div>
-        </div>
-
-        {/* Logo and Navigation - Second Row, Left Aligned */}
-        <div className="flex items-center justify-between py-2">
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
-              <span className="text-purple-600 dark:text-purple-300 text-xl font-bold">
-                A
-              </span>
+    <header className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div className="max-w-[1440px] mx-auto flex justify-end items-center px-8 md:px-16 py-3 text-xs font-medium text-gray-700 dark:text-gray-300">
+        <div className="flex items-center gap-4">
+          <button className="flex items-center gap-2 cursor-pointer select-none" onClick={toggleDarkMode}>
+            <div className={`relative w-10 h-5 rounded-full transition-colors duration-300 ${darkMode ? 'bg-[#3730A3]' : 'bg-gray-300'}`}>
+              <div className={`absolute top-0.5 left-0.5 w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 bg-[#FFE86E] ${darkMode ? 'translate-x-5' : ''}`}></div>
             </div>
-          </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Button
-              variant="navigation"
-              onClick={() => scrollToSection("skills")}
-            >
+            <span className="uppercase tracking-wide text-[11px]">{darkMode ? header.darkModeText : header.lightModeText}</span>
+          </button>
+          <span className="text-gray-300">|</span>
+          <button className="uppercase text-[11px] tracking-wide text-[#3730A3] hover:text-[#2d2987] transition-colors" onClick={toggleLanguage}>
+            {currentLanguage === 'tr' ? 'SWITCH TO ENGLISH' : 'TÜRKÇEYE GEÇ'}
+          </button>
+        </div>
+      </div>
+      <div className="max-w-[1440px] mx-auto flex justify-between items-center px-8 md:px-16 py-3">
+        <button className="w-9 h-9 flex items-center justify-center bg-[#EEEBFF] text-[#7B61FF] font-bold rounded-full text-lg shadow-sm transform rotate-[30deg] cursor-pointer" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); window.location.hash = ''; }}>
+          {header.logoText || 'X'}
+        </button>
+        <div className="flex items-center gap-10">
+          <nav className="flex gap-10 text-sm font-medium text-gray-700 dark:text-gray-300">
+            <a href="#skills" className="hover:text-[#3730A3] dark:hover:text-[#3730A3] transition-colors" onClick={() => scrollToSection("skills")}>
               {header.skillsButton}
-            </Button>
-            <Button
-              variant="navigation"
-              onClick={() => scrollToSection("projects")}
-            >
+            </a>
+            <a href="#projects" className="hover:text-[#3730A3] dark:hover:text-[#3730A3] transition-colors" onClick={() => scrollToSection("projects")}>
               {header.projectsButton}
-            </Button>
-            <Button
-              variant="hireMe"
-              onClick={() => scrollToSection("footer")}
-            >
-              {header.hireMeButton}
-            </Button>
+            </a>
           </nav>
+          <button className="cursor-pointer text-sm font-medium border border-[#3730A3] text-[#3730A3] hover:bg-[#3730A3] hover:text-white px-5 py-1.5 rounded-md transition-colors duration-300" onClick={() => scrollToSection("footer")}>
+            {header.hireMeButton}
+          </button>
         </div>
       </div>
     </header>
