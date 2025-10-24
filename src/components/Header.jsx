@@ -28,7 +28,7 @@ const Header = () => {
                 onChange={toggleDarkMode}
                 className="sr-only peer"
               />
-              <div className="w-14 h-7 bg-gray-300 peer-focus:outline-none rounded-full peer dark:bg-purple-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all"></div>
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-purple-600"></div>
               <span className="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
                 {darkMode ? header.darkModeText : header.lightModeText}
               </span>
@@ -42,11 +42,11 @@ const Header = () => {
               className="text-sm font-medium text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
             >
               <span
-                className={`${
+                className={
                   currentLanguage === "tr"
                     ? "text-red-600 dark:text-red-400"
                     : "text-blue-600 dark:text-blue-400"
-                }`}
+                }
               >
                 {currentLanguage === "tr" ? header.turkishText : header.englishText}
               </span>
