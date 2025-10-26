@@ -114,8 +114,8 @@ export const data = {
       ],
     },
     footer: {
-      heading1: "Bir sonraki",
-      heading2: "ürününüzde birlikte çalışalım.",
+      heading1: "Bir sonraki ürününüzde",
+      heading2: "birlikte çalışalım.",
       email: "ali.yucel675@hotmail.com",
       links: {
         github: { label: "Github", url: "https://github.com/AliYcll" },
