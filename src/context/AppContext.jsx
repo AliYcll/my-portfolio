@@ -35,13 +35,6 @@ export const AppProvider = ({ children }) => {
     );
   };
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const currentData = data[currentLanguage];
 
   const value = {
@@ -49,7 +42,6 @@ export const AppProvider = ({ children }) => {
     toggleDarkMode,
     currentLanguage,
     toggleLanguage,
-    scrollToSection, // Added scrollToSection
     currentData,
   };
 

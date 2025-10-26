@@ -18,6 +18,13 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 150px;
+  }
 }
 
 @keyframes fade-in {

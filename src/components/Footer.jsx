@@ -23,7 +23,7 @@ const Footer = () => {
   }, [currentLanguage]);
 
   return (
-    <footer className="w-full py-12 bg-[#F9F9F9] dark:bg-gray-900 transition-colors duration-300">
+    <footer id="footer" className="w-full py-12 bg-[#F9F9F9] dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-[1440px] mx-auto px-8 md:px-16 flex flex-col gap-10">
         <div className="text-left max-w-sm">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">{footer.heading}</h2>
