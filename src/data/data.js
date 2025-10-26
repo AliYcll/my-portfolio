@@ -80,13 +80,13 @@ export const data = {
       projects: [
         {
           id: 1,
-          title: "Bütçe Yönetimi Stajyeri",
-          description: "Akıllı Üniversite ve Dijital Dönüşüm Birimi, Bakırçay Üniversitesi – İzmir (Mart 2024 – Haziran 2024) - C, .NET Core MVC ve MSSQL kullanarak bir bütçe yönetim sistemi geliştirdim. - Güvenli giriş sistemi oluşturarak kullanıcı yetkilendirmesi ve rol yönetimi entegre ettim. - Dinamik bir yönetici paneli geliştirerek dijital dönüşüm sürecine katkıda bulundum.",
-          tags: ["C", ".NET Core MVC", "MSSQL"],
-          image: "/images/budget_management.png", 
+          title: "Teknolojik Yemekler - Dinamik Pizza Sipariş Uygulaması",
+          description: "Bu proje, kurgusal bir yemek sipariş markası olan 'Teknolojik Yemekler' için geliştirilmiş bir tek sayfa uygulamasıdır (SPA). Kullanıcıların dinamik ve etkileşimli bir arayüz üzerinden pizza siparişi vermelerine olanak tanır. Uygulama; bir ana sayfa, çeşitli özelleştirme seçenekleri ve alan doğrulamaları içeren detaylı bir sipariş formu ve siparişin başarıyla alındığını gösteren bir onay sayfasından oluşmaktadır. Proje, component bazlı mimari, state yönetimi ve routing gibi temel React prensiplerini pekiştirmeyi amaçlamakta ve Cypress ile yazılmış uçtan uca testler içermektedir.",
+          tags: ["React", "React Router", "Vite", "JavaScript", "CSS", "Cypress", "Axios"],
+          image: "/images/project_1.jpg",
           links: {
-            github: "https://github.com/AliYcll", 
-            live: "#", 
+            github: "https://github.com/AliYcll/react-ile-dinamik-pizza-projesi",
+            live: "https://react-ile-dinamik-pizza-projesi.vercel.app/",
           },
         },
         {
@@ -205,13 +205,13 @@ export const data = {
       projects: [
         {
           id: 1,
-          title: "Budget Management Intern",
-          description: "Smart University and Digital Transformation Unit, Bakırçay University – Izmir (March 2024 – June 2024) - Developed a budget management system using C, .NET Core MVC, and MSSQL. - Integrated user authorization and role management by creating a secure login system. - Contributed to the digital transformation process by developing a dynamic admin panel.",
-          tags: ["C", ".NET Core MVC", "MSSQL"],
-          image: "/images/budget_management.png", 
+          title: "Teknolojik Yemekler - A Dynamic Pizza Ordering SPA",
+          description: "This project is a single-page application for 'Teknolojik Yemekler', a fictional food delivery service. It's designed to allow users to order pizza through a dynamic and interactive interface. The application consists of a welcoming homepage, a detailed order form with various customization options and input validation, and a final success page to confirm the order. The project emphasizes core React principles such as component-based architecture, state management, and routing, and it includes end-to-end tests written with Cypress to ensure functionality.",
+          tags: ["React", "React Router", "Vite", "JavaScript", "CSS", "Cypress", "Axios"],
+          image: "/images/project_1.jpg",
           links: {
-            github: "https://github.com/AliYcll", 
-            live: "#", 
+            github: "https://github.com/AliYcll/react-ile-dinamik-pizza-projesi",
+            live: "https://react-ile-dinamik-pizza-projesi.vercel.app/",
           },
         },
         {

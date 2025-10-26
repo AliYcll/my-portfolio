@@ -27,7 +27,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="md:w-1/2 flex justify-center md:justify-end mt-12 md:mt-0">
-        <img alt="Ali Yücel" className="w-[476px] h-[375px] rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg object-cover object-top" src="/pictures/main_pic.jpg" />
+        <img alt="Ali Yücel" className="w-[476px] h-[375px] rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg object-cover object-top" src="/images/main_pic.jpg" />
       </div>
     </section>
   );
