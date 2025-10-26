@@ -2,9 +2,9 @@ export const data = {
   tr: {
     heroSection: {
       name: "Ali Yücel",
-      tagline: "Yaratıcı düşünür, Minimalist ruhlu", 
+      tagline: "Yaratıcı düşünür Minimalizm aşığı", 
       description:
-        "Kariyer hedefim, Java ve Spring Boot alanında kendimi geliştirerek yaratıcı bir ekibe katılmak ve profesyonel anlamda büyümek. Ayrıca React gibi frontend teknolojilerinde uzmanlaşarak full-stack geliştirici olmayı amaçlıyorum. Bilgisayar mühendisliğinin farklı departmanlarında çalışmaya da açığım.",
+        "Merhaba, ben Ali. Ben bir full-stack geliştiriciyim. Harika kullanıcı deneyimlerine sahip, sağlam ve ölçeklenebilir frontend ürünleri geliştiren bir geliştirici arıyorsanız, gelin el sıkışalım.",
       hireMe: "Beni İşe Al",
       githubText: "Github",
       linkedinText: "Linkedin",
@@ -58,18 +58,18 @@ export const data = {
     profileSection: {
       title: "Profil",
       basicInfo: {
-        title: "İletişim Bilgileri", 
+        title: "Profil", 
         items: [
-          { label: "Telefon", value: "+90 545 110 5791" },
-          { label: "E-posta", value: "ali.yucel675@hotmail.com" },
-          { label: "LinkedIn", value: "linkedin.com/in/aliycll" },
-          { label: "GitHub", value: "github.com/AliYcll" },
+          { label: "Doğum tarihi", value: "29.09.2000" },
+          { label: "İkamet Şehri", value: "Hatay" },
+          { label: "Eğitim Durumu", value: "İzmir Bakırçay Ünv. Bilgisayar Mühendisliği, 2024" },
+          { label: "Tercih Ettiği Rol", value: "Frontend, UI" },
         ],
       },
       aboutMe: {
-        title: "Özet", 
+        title: "Hakkımda", 
         paragraphs: [
-          "Kariyer hedefim, Java ve Spring Boot alanında kendimi geliştirerek yaratıcı bir ekibe katılmak ve profesyonel anlamda büyümek. Ayrıca React gibi frontend teknolojilerinde uzmanlaşarak full-stack geliştirici olmayı amaçlıyorum. Bilgisayar mühendisliğinin farklı departmanlarında çalışmaya da açığım.",
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.\n\n        Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
         ],
       },
     },
@@ -114,11 +114,12 @@ export const data = {
       ],
     },
     footer: {
-      heading: "Birlikte yaratıcı bir proje geliştirelim.",
+      heading1: "Bir sonraki",
+      heading2: "ürününüzde birlikte çalışalım.",
       email: "ali.yucel675@hotmail.com",
       links: {
         github: { label: "Github", url: "https://github.com/AliYcll" },
-        blog: { label: "Blog", url: "https://github.com/AliYcll" },
+        blog: { label: "Kişisel Blog", url: "https://github.com/AliYcll" },
         linkedin: { label: "LinkedIn", url: "https://www.linkedin.com/in/aliycll" },
       },
     },
@@ -126,9 +127,9 @@ export const data = {
   en: {
     heroSection: {
       name: "Ali Yücel",
-      tagline: "Creative thinker, Minimalist soul",
-      description:
-        "My career goal is to join a creative team and grow professionally by developing myself in Java and Spring Boot. I also aim to become a full-stack developer by specializing in frontend technologies like React. I am also open to working in different departments of computer engineering.",
+      tagline: "Creative thinker Minimalism lover",
+    description:
+        "Hi, I’m Ali. I’m a full-stack developer. If you are looking for a developer who crafts solid and scalable frontend products with great user experiences, let’s shake hands with me.",
       hireMe: "Hire Me",
       githubText: "Github",
       linkedinText: "Linkedin",
@@ -182,18 +183,18 @@ export const data = {
     profileSection: {
       title: "Profile",
       basicInfo: {
-        title: "Contact Information",
+        title: "Profile",
         items: [
-          { label: "Phone", value: "+90 545 110 5791" },
-          { label: "Email", value: "ali.yucel675@hotmail.com" },
-          { label: "LinkedIn", value: "linkedin.com/in/aliycll" },
-          { label: "GitHub", value: "github.com/AliYcll" },
+          { label: "Date of Birth", value: "29.09.2000" },
+          { label: "City of Residence", value: "Hatay" },
+          { label: "Education Status", value: "Izmir Bakircay University, Computer Engineering, 2024" },
+          { label: "Preferred Role", value: "Frontend, UI" },
         ],
       },
       aboutMe: {
-        title: "Summary",
+        title: "About Me",
         paragraphs: [
-          "My career goal is to join a creative team and grow professionally by developing myself in Java and Spring Boot. I also aim to become a full-stack developer by specializing in frontend technologies like React. I am also open to working in different departments of computer engineering.",
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.\n\n        Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
         ],
       },
     },
@@ -238,11 +239,12 @@ export const data = {
       ],
     },
     footer: {
-      heading: "Let's develop a creative project together.",
+      heading1: "Let's work together on",
+      heading2: "your next product.",
       email: "ali.yucel675@hotmail.com",
       links: {
         github: { label: "Github", url: "https://github.com/AliYcll" },
-        blog: { label: "Blog", url: "https://github.com/AliYcll" },
+        blog: { label: "Personal Blog", url: "https://github.com/AliYcll" },
         linkedin: { label: "LinkedIn", url: "https://www.linkedin.com/in/aliycll" },
       },
     },

@@ -18,12 +18,12 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 200px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) { /* Genellikle tablet ve masaüstü için 'md' breakpoint */
   html {
-    scroll-padding-top: 150px;
+    scroll-padding-top: 140px; /* Masaüstü cihazlar için farklı bir değer */
   }
 }
 

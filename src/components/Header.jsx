@@ -1,14 +1,14 @@
 import React from "react";
 import { useApp } from "../hooks/useApp";
 
-const Header = () => {
+const Header = React.forwardRef(({ headerHeight }, ref) => {
   const { darkMode, toggleDarkMode, currentLanguage, toggleLanguage, currentData } =
     useApp();
   const { header } = currentData;
 
   return (
-    <header id="main-header" className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="max-w-[1440px] mx-auto flex justify-end items-center px-2 md:px-4 py-1 md:py-2 text-base md:text-xl font-medium text-gray-700 dark:text-gray-300">
+    <header ref={ref} id="main-header" className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-[#252128] transition-colors duration-300">
+      <div className="max-w-[1440px] mx-auto flex justify-end items-center px-2 md:px-4 py-1 md:py-2 text-base md:text-xl font-medium text-gray-700 dark:text-gray-300 mt-2">
         <div className="flex items-center gap-4 md:gap-8">
           <button className="flex items-center gap-2 cursor-pointer select-none" onClick={toggleDarkMode}>
             <div className={`relative w-10 h-5 rounded-full transition-colors duration-300 ${darkMode ? 'bg-[#3730A3]' : 'bg-gray-300'}`}>
@@ -42,6 +42,6 @@ const Header = () => {
       </div>
     </header>
   );
-};
+});
 
 export default Header;

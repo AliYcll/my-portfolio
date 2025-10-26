@@ -6,9 +6,9 @@ const SkillsSection = () => {
   const { skillsSection } = currentData;
 
   return (
-    <section id="skills" className="w-full py-20 transition-colors duration-300">
+    <section id="skills" className="w-full pb-20 transition-colors duration-300">
       <div className="max-w-[1440px] mx-auto px-8 md:px-16">
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">{skillsSection.title}</h2>
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white my-12">{skillsSection.title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillsSection.skills.map((skill, index) => (
             <div key={index} className="p-2 rounded-md transition-all duration-300 hover:bg-gray-50 hover:dark:bg-gray-800">
