@@ -100,6 +100,17 @@ export const data = {
             live: "https://reducer-calculator-six.vercel.app/",
           },
         },
+        {
+          id: 3,
+          title: "Kişisel Portföy Web Sitesi",
+          description: "Bu proje, kişisel yeteneklerimi, deneyimlerimi ve tamamladığım çalışmaları sergilemek amacıyla geliştirilmiş bir tek sayfa uygulamasıdır (SPA). Ziyaretçilerin benimle ilgili bilgilere kolayca ulaşmasını ve projelerimi incelemesini sağlar. Uygulama; bir ana sayfa, yeteneklerimi detaylandıran bir bölüm, profil bilgilerimi içeren bir kısım, tamamladığım projelerin listelendiği bir bölüm ve iletişim bilgilerimi barındıran bir altbilgiden oluşmaktadır. Proje, modern web geliştirme prensiplerini, duyarlı tasarımı ve kullanıcı deneyimini ön planda tutarak React, TailwindCSS ve Vite gibi teknolojilerle geliştirilmiştir.",
+          tags: ["React", "TailwindCSS", "Vite", "JavaScript", "Duyarlı Tasarım", "ESLint"],
+          image: "/images/project_3.jpg", 
+          links: {
+            github: "https://github.com/AliYcll/my-portfolio", 
+            live: "https://your-portfolio-live-link.vercel.app/", 
+          },
+        },
       ],
     },
     footer: {
@@ -212,6 +223,17 @@ export const data = {
           links: {
             github: "https://github.com/AliYcll/fsweb-s10g1-reducer-calculator",
             live: "https://reducer-calculator-six.vercel.app/",
+          },
+        },
+        {
+          id: 3,
+          title: "Personal Portfolio Website",
+          description: "This project is a single-page application (SPA) developed to showcase my personal skills, experiences, and completed works. It allows visitors to easily access information about me and explore my projects. The application consists of a homepage, a section detailing my skills, a part containing my profile information, a section listing my completed projects, and a footer with my contact details. The project was developed using React, TailwindCSS, and Vite, following modern web development principles with a focus on responsive design and user experience.",
+          tags: ["React", "TailwindCSS", "Vite", "JavaScript", "Responsive Design", "ESLint"],
+          image: "/images/project_3.jpg", 
+          links: {
+            github: "https://github.com/AliYcll/my-portfolio", 
+            live: "https://your-portfolio-live-link.vercel.app/", 
           },
         },
       ],

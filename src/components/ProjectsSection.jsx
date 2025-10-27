@@ -12,7 +12,7 @@ const ProjectsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projectsSection.projects.map((project, index) => (
             <div key={index} className="p-4 rounded-lg border border-transparent hover:border-[#3730A3]/30 hover:shadow-md transition-all duration-300">
-              <img alt={project.title} className="w-full h-48 object-cover rounded-t-lg mb-4" src={project.image} />
+              <img alt={project.title} className="w-full h-48 object-cover rounded-t-lg mb-4 border border-[#e3e3ff]" src={project.image} />
               <h3 className="text-xl font-semibold text-[#3730A3] dark:text-[#aebccf] mb-3">{project.title}</h3>
               <p className="text-gray-600 dark:text-[#e3e3ff] text-sm leading-relaxed mb-5">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-6">
