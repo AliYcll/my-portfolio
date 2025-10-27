@@ -108,7 +108,7 @@ export const data = {
           image: "/images/project_3.jpg", 
           links: {
             github: "https://github.com/AliYcll/my-portfolio", 
-            live: "https://your-portfolio-live-link.vercel.app/", 
+            live: "https://my-portfolio-nu-one-45.vercel.app/", 
           },
         },
       ],
@@ -233,7 +233,7 @@ export const data = {
           image: "/images/project_3.jpg", 
           links: {
             github: "https://github.com/AliYcll/my-portfolio", 
-            live: "https://your-portfolio-live-link.vercel.app/", 
+            live: "https://my-portfolio-nu-one-45.vercel.app/", 
           },
         },
       ],
