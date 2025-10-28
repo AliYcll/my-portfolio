@@ -79,3 +79,21 @@ html {
   outline: 2px solid #e92577;
   outline-offset: 2px;
 }
+
+@media (max-width: 414px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+
+  #main-header {
+    zoom: 0.9;
+  }
+}
+@media (max-width: 364px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+  #main-header {
+    zoom: 0.8;
+  }
+}
