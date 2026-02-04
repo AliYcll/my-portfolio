@@ -2,7 +2,7 @@ export const data = {
   tr: {
     heroSection: {
       name: "Ali Yücel",
-      tagline: "Yaratıcı düşünür Minimalizm aşığı", 
+      tagline: "Yaratıcı düşünür Minimalizm aşığı",
       description:
         "Merhaba, ben Ali. Ben bir full-stack geliştiriciyim. Harika kullanıcı deneyimlerine sahip, sağlam ve ölçeklenebilir frontend ürünleri geliştiren bir geliştirici arıyorsanız, gelin el sıkışalım.",
       hireMe: "Beni İşe Al",
@@ -19,8 +19,8 @@ export const data = {
       hireMeButton: "Beni İşe Al",
       darkModeText: "KARANLIK MOD",
       lightModeText: "AYDINLIK MOD",
-      turkishText: "SWITCH TO ENGLISH", 
-      logoText: "A", 
+      turkishText: "SWITCH TO ENGLISH",
+      logoText: "A",
     },
     skillsSection: {
       title: "Yetenekler",
@@ -47,7 +47,7 @@ export const data = {
         },
         {
           name: "Araçlar",
-          description: "Visual Studio, VS Code, Eclipse, Postman, Vercel",
+          description: "Visual Studio, VS Code, IntelliJ, Postman, Vercel, Docker",
         },
         {
           name: "Diller",
@@ -58,23 +58,23 @@ export const data = {
     profileSection: {
       title: "Profil",
       basicInfo: {
-        title: "Profil", 
+        title: "Profil",
         items: [
           { label: "Doğum tarihi", value: "29.09.2000" },
           { label: "İkamet Şehri", value: "Hatay" },
           { label: "Eğitim Durumu", value: "İzmir Bakırçay Ünv. Bilgisayar Mühendisliği, 2024" },
-          { label: "Tercih Ettiği Rol", value: "Frontend, UI" },
+          { label: "Tercih Ettiği Rol", value: "Frontend, Backend, Fullstack Developer" },
         ],
       },
       aboutMe: {
-        title: "Hakkımda", 
+        title: "Hakkımda",
         paragraphs: [
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.\n\n        Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+          "Yazılım geliştirme alanında kendini sürekli geliştiren, çözüm odaklı ve sorumluluk almayı önemseyen bir geliştiriciyim. Backend tarafında Java ve Spring Boot kullanarak RESTful servisler geliştiriyor, PostgreSQL ile veritabanı tasarımı ve sorgu yapıları üzerinde çalışıyorum. Frontend tarafında HTML, CSS, JavaScript ve React ile arayüzler geliştirdim; Tailwind CSS ile modern ve düzenli tasarımlar oluşturdum. Git ve GitHub ile versiyon kontrol süreçlerini aktif olarak kullanıyor, temiz ve sürdürülebilir kod yazmaya özen gösteriyorum. Öğrenmeye açık bir yapıya sahibim ve teknik yetkinliklerimi gerçek projelerde daha da ileri taşımak istiyorum.",
         ],
       },
     },
     projectsSection: {
-      title: "Projeler", 
+      title: "Projeler",
       githubLinkText: "GitHub",
       viewSiteLinkText: "Live Demo",
       projects: [
@@ -91,13 +91,13 @@ export const data = {
         },
         {
           id: 2,
-          title: "Reducer Hesap Makinesi - React Tabanlı Hesap Makinesi SPA",
-          description: "Bu proje, React ve reducer deseni kullanılarak oluşturulmuş bir hesap makinesi için tek sayfalık bir uygulamadır. Temel aritmetik işlemleri (toplama, çıkarma, çarpma, bölme), hafıza fonksiyonları (M+, MR, MC) ve bir hesaplama geçmişi ekranı içerir. Hesap makinesi, çok haneli sayı girişi, zincirleme işlemler ve sayılar, operatörler, Enter (hesaplama için) ve Escape (mevcut girişi temizlemek için) için klavye etkileşimini destekler. Proje, bileşen tabanlı mimari ve reducer'lar ile durum yönetimi gibi temel React prensiplerini vurgular.",
-          tags: ["React", "Reducer Pattern", "JavaScript", "CSS", "State Management"],
-          image: "/images/project_2.jpg", 
+          title: "Twitter Klonu - Full Stack Sosyal Medya Platformu",
+          description: "Bu proje, Twitter'ın (X) temel işlevlerini kopyalamak için oluşturulmuş modern, duyarlı bir sosyal medya uygulamasıdır. Java Spring Boot backend ve React frontend ile güçlü bir full-stack mimariye sahiptir. Uygulama, güvenli JWT kimlik doğrulama, gerçek zamanlı akış, multimedya destekli tweet oluşturma, etkileşim özellikleri (beğeni, retweet, yorum) ve kapsamlı bir kullanıcı profil sistemi içerir. Arayüz, Tailwind CSS ile güçlendirilmiş duyarlı 3 sütunlu bir düzen kullanılarak X'in modern 'Karanlık Mod' estetiğine uyacak şekilde tamamen yeniden tasarlandı.",
+          tags: ["React", "Spring Boot", "PostgreSQL", "Tailwind CSS", "JWT Auth", "REST API", "Java", "Vite"],
+          image: "/images/project_2.png",
           links: {
-            github: "https://github.com/AliYcll/fsweb-s10g1-reducer-calculator",
-            live: "https://reducer-calculator-six.vercel.app/",
+            github: "https://github.com/AliYcll/twitter-clone-frontend",
+            live: "https://github.com/AliYcll/twitter-clone-api",
           },
         },
         {
@@ -105,10 +105,21 @@ export const data = {
           title: "Kişisel Portföy Web Sitesi",
           description: "Bu proje, kişisel yeteneklerimi, deneyimlerimi ve tamamladığım çalışmaları sergilemek amacıyla geliştirilmiş bir tek sayfa uygulamasıdır (SPA). Ziyaretçilerin benimle ilgili bilgilere kolayca ulaşmasını ve projelerimi incelemesini sağlar. Uygulama; bir ana sayfa, yeteneklerimi detaylandıran bir bölüm, profil bilgilerimi içeren bir kısım, tamamladığım projelerin listelendiği bir bölüm ve iletişim bilgilerimi barındıran bir altbilgiden oluşmaktadır. Proje, modern web geliştirme prensiplerini, duyarlı tasarımı ve kullanıcı deneyimini ön planda tutarak React, TailwindCSS ve Vite gibi teknolojilerle geliştirilmiştir.",
           tags: ["React", "TailwindCSS", "Vite", "JavaScript", "Duyarlı Tasarım", "ESLint"],
-          image: "/images/project_3.jpg", 
+          image: "/images/project_3.jpg",
           links: {
-            github: "https://github.com/AliYcll/my-portfolio", 
-            live: "https://ali-yucel.vercel.app/", 
+            github: "https://github.com/AliYcll/my-portfolio",
+            live: "https://ali-yucel.vercel.app/",
+          },
+        },
+        {
+          id: 4,
+          title: "Bandage E-Commerce - Modern Alışveriş Platformu",
+          description: "Bu proje, gerçek bir e-ticaret deneyimi sunmak için geliştirilmiş, çok sayfalı ve dinamik yapıda bir alışveriş web sitesidir. Kullanıcıların ürünleri kategorilere göre gezebildiği, filtreleyebildiği ve detaylı inceleyebildiği kullanıcı dostu bir arayüze sahiptir. Proje içerisinde; vitrin (anasayfa), ürün listeleme, detaylı ürün sayfası, sepet yönetimi, sipariş oluşturma ve geçmiş siparişleri görüntüleme gibi kapsamlı sayfalar bulunur. Redux ile sepet ve kullanıcı oturum yönetimi sağlanırken, Tailwind CSS ile her ekrana uyumlu şık bir tasarım oluşturulmuştur.",
+          tags: ["React", "Redux", "React Router", "Tailwind CSS", "Vite", "Axios", "JavaScript"],
+          image: "/images/project_4.png",
+          links: {
+            github: "https://github.com/AliYcll/e-commerce",
+            live: "https://bandage-shopping.vercel.app/",
           },
         },
       ],
@@ -128,7 +139,7 @@ export const data = {
     heroSection: {
       name: "Ali Yücel",
       tagline: "Creative thinker Minimalism lover",
-    description:
+      description:
         "Hi, I’m Ali. I’m a full-stack developer. If you are looking for a developer who crafts solid and scalable frontend products with great user experiences, let’s shake hands with me.",
       hireMe: "Hire Me",
       githubText: "Github",
@@ -172,7 +183,7 @@ export const data = {
         },
         {
           name: "Tools",
-          description: "Visual Studio, VS Code, Eclipse, Postman, Vercel",
+          description: "Visual Studio, VS Code, IntelliJ, Postman, Vercel, Docker",
         },
         {
           name: "Languages",
@@ -188,13 +199,13 @@ export const data = {
           { label: "Date of Birth", value: "29.09.2000" },
           { label: "City of Residence", value: "Hatay" },
           { label: "Education Status", value: "Izmir Bakircay University, Computer Engineering, 2024" },
-          { label: "Preferred Role", value: "Frontend, UI" },
+          { label: "Preferred Role", value: "Frontend, Backend, Fullstack Developer" },
         ],
       },
       aboutMe: {
         title: "About Me",
         paragraphs: [
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.\n\n        Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+          "I am a solution-oriented developer who constantly improves myself in software development and values taking responsibility. On the backend, I develop RESTful services using Java and Spring Boot, and work on database design and query structures with PostgreSQL. On the frontend, I develop interfaces using HTML, CSS, JavaScript, and React, creating modern and organized designs with Tailwind CSS. I actively use Git and GitHub for version control and prioritize writing clean, sustainable code. I am open to learning and eager to further advance my technical skills through real-world projects.",
         ],
       },
     },
@@ -216,13 +227,13 @@ export const data = {
         },
         {
           id: 2,
-          title: "Reducer Calculator - A React-based Calculator SPA",
-          description: "This project is a single-page application for a calculator built using React and the reducer pattern. It features basic arithmetic operations (addition, subtraction, multiplication, division), memory functions (M+, MR, MC), and a calculation history display. The calculator supports multi-digit number input, chained operations, and keyboard interaction for numbers, operators, Enter (for calculation), and Escape (to clear current entry). The project emphasizes core React principles such as component-based architecture and state management with reducers.",
-          tags: ["React", "Reducer Pattern", "JavaScript", "CSS", "State Management"],
-          image: "/images/project_2.jpg", 
+          title: "Twitter Clone - Full Stack Social Media Platform",
+          description: "This project is a modern, responsive social media application built to replicate the core functionality of Twitter (X). It features a robust full-stack architecture with a Java Spring Boot backend and a React frontend. The application includes secure JWT authentication, a real-time feed, tweet creation with multimedia support, interaction features (like, retweet, comment), and a comprehensive user profile system. The UI was completely redesigned to match the modern 'Dark Mode' aesthetic of X, utilizing a responsive 3-column layout powered by Tailwind CSS.",
+          tags: ["React", "Spring Boot", "PostgreSQL", "Tailwind CSS", "JWT Auth", "REST API", "Java", "Vite"],
+          image: "/images/project_2.png",
           links: {
-            github: "https://github.com/AliYcll/fsweb-s10g1-reducer-calculator",
-            live: "https://reducer-calculator-six.vercel.app/",
+            github: "https://github.com/AliYcll/twitter-clone-frontend",
+            live: "https://github.com/AliYcll/twitter-clone-api",
           },
         },
         {
@@ -230,10 +241,21 @@ export const data = {
           title: "Personal Portfolio Website",
           description: "This project is a single-page application (SPA) developed to showcase my personal skills, experiences, and completed works. It allows visitors to easily access information about me and explore my projects. The application consists of a homepage, a section detailing my skills, a part containing my profile information, a section listing my completed projects, and a footer with my contact details. The project was developed using React, TailwindCSS, and Vite, following modern web development principles with a focus on responsive design and user experience.",
           tags: ["React", "TailwindCSS", "Vite", "JavaScript", "Responsive Design", "ESLint"],
-          image: "/images/project_3.jpg", 
+          image: "/images/project_3.jpg",
           links: {
-            github: "https://github.com/AliYcll/my-portfolio", 
-            live: "https://ali-yucel.vercel.app/", 
+            github: "https://github.com/AliYcll/my-portfolio",
+            live: "https://ali-yucel.vercel.app/",
+          },
+        },
+        {
+          id: 4,
+          title: "Bandage E-Commerce - Modern Shopping Platform",
+          description: "This project is a multi-page, dynamic shopping website designed to provide a real e-commerce experience. It features a user-friendly interface that allows users to browse products by category, apply filters, and view detailed product information. The application includes comprehensive pages such as a showcase (homepage), product listing, product details, cart management, order creation, and order history. It utilizes Redux for cart and user session management, and Tailwind CSS to ensure a stylish, responsive design across all devices.",
+          tags: ["React", "Redux", "React Router", "Tailwind CSS", "Vite", "Axios", "JavaScript"],
+          image: "/images/project_4.png",
+          links: {
+            github: "https://github.com/AliYcll/e-commerce",
+            live: "https://bandage-shopping.vercel.app/",
           },
         },
       ],
